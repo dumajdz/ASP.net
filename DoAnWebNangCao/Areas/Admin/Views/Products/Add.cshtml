@@ -4,6 +4,8 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
+
+
 @section naviheader{
     <!-- Left navbar links -->
     <ul class="navbar-nav">
@@ -81,11 +83,11 @@
                                             @Html.TextBoxFor(x => x.ProductCode, new { @class = "form-control", @placeholder = "Mã mã phẩm" })
                                             @Html.ValidationMessageFor(x => x.ProductCode, null, new { @class = "text-danger" })
                                         </div>
-                                        @*<div class="form-group">
+                                        <div class="form-group">
                                             <label for="exampleInputEmail1">Danh mục</label>
                                             @Html.DropDownListFor(x => x.ProductCategoryId, ViewBag.ProductCategory as SelectList, "-Chọn danh mục sản phẩm-", new { @class = "form-control", @placeholder = "Mã mã phẩm" })
                                             @Html.ValidationMessageFor(x => x.ProductCategoryId, null, new { @class = "text-danger" })
-                                        </div>*@
+                                        </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Mô tả</label>
                                             @Html.TextAreaFor(x => x.Description, new { @class = "form-control", @placeholder = "Mã mã phẩm" })
@@ -291,19 +293,19 @@
             var str = "";
             if (currentId == 1) {
                 str += `<tr id="trow_${currentId}">
-                            <td class="text-center">${currentId}</td>
-                            <td class="text-center"><img width="80" src="${url}" /> <input type='hidden' value="${url}" name="Images"/></td>
-                            <td class="text-center"><input type="radio" name="rDefault" value="${currentId}" checked="checked"/></td>
-                            <td class="text-center"><a href="#" data-id="${currentId}" class="btn btn-sm btn-danger btnXoaAnh">Xóa</a></td>
-                            </tr>`;
+                                <td class="text-center">${currentId}</td>
+                                <td class="text-center"><img width="80" src="${url}" /> <input type='hidden' value="${url}" name="Images"/></td>
+                                <td class="text-center"><input type="radio" name="rDefault" value="${currentId}" checked="checked"/></td>
+                                <td class="text-center"><a href="#" data-id="${currentId}" class="btn btn-sm btn-danger btnXoaAnh">Xóa</a></td>
+                                </tr>`;
             }
             else {
                 str += `<tr id="trow_${currentId}">
-                            <td class="text-center">${currentId}</td>
-                            <td class="text-center"><img width="80" src="${url}" /> <input type='hidden' value="${url}" name="Images"/></td>
-                            <td class="text-center"><input type="radio" name="rDefault" value="${currentId}"/></td>
-                            <td class="text-center"><a href="#" data-id="${currentId}" class="btn btn-sm btn-danger btnXoaAnh">Xóa</a></td>
-                            </tr>`;
+                                <td class="text-center">${currentId}</td>
+                                <td class="text-center"><img width="80" src="${url}" /> <input type='hidden' value="${url}" name="Images"/></td>
+                                <td class="text-center"><input type="radio" name="rDefault" value="${currentId}"/></td>
+                                <td class="text-center"><a href="#" data-id="${currentId}" class="btn btn-sm btn-danger btnXoaAnh">Xóa</a></td>
+                                </tr>`;
             }
             $('#tbHtml').append(str);
             $('#tCurrentId').val(currentId);
@@ -321,7 +323,7 @@
             //            }
             //        });
             //    });
-            }
+        }
 
     </script>
 }

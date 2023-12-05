@@ -9,8 +9,13 @@ using System.Web.Mvc;
 namespace DoAnWebNangCao.Models.EF
 {
     [Table("tb_Product")]
-    public class Product :CommonAbstract
+    public class Product : CommonAbstract
     {
+        public Product()
+        {
+            this.ProductImage = new HashSet<ProductImage>();
+            this.OrderDetails = new HashSet<OrderDetail>();
+        }
         [Key]
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
@@ -32,8 +37,9 @@ namespace DoAnWebNangCao.Models.EF
         public string Image { get; set; }
         public decimal OriginalPrice { get; set; }
         public decimal Price { get; set; }
-        public decimal PriceSale { get; set; }
+        public decimal? PriceSale { get; set; }
         public int Quantity { get; set; }
+        public int ViewCount { get; set; }
         public bool IsHome { get; set; }
         public bool IsSale { get; set; }
         public bool IsFeature { get; set; }
@@ -49,5 +55,7 @@ namespace DoAnWebNangCao.Models.EF
         public string SeoKeywords { get; set; }
 
         public virtual ProductCategory ProductCategory { get; set; }
+        public virtual ICollection<ProductImage> ProductImage { get; set; }
+        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }

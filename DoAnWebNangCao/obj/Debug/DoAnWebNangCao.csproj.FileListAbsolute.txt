@@ -121,3 +121,10 @@ C:\Users\ADMIN\Desktop\ASP\DoAnWebNangCao\DoAnWebNangCao\obj\Debug\DoAnWebNangCa
 C:\Users\ADMIN\Desktop\ASP\DoAnWebNangCao\DoAnWebNangCao\obj\Debug\DoAnWebNangCao.Migrations.RenameSeoKeywordToSeoKeywords.resources
 C:\Users\ADMIN\Desktop\ASP\DoAnWebNangCao\DoAnWebNangCao\obj\Debug\DoAnWebNangCao.Migrations.ChangeModels1.resources
 C:\Users\ADMIN\Desktop\ASP\DoAnWebNangCao\DoAnWebNangCao\obj\Debug\DoAnWebNangCao.Migrations.UpdateProductCategory.resources
+C:\Users\ADMIN\Desktop\ASP\DoAnWebNangCao\DoAnWebNangCao\obj\Debug\DoAnWebNangCao.Migrations.Update1123.resources
+C:\Users\ADMIN\Desktop\ASP\DoAnWebNangCao\DoAnWebNangCao\obj\Debug\DoAnWebNangCao.Migrations.Update1126.resources
+C:\Users\ADMIN\Desktop\ASP\DoAnWebNangCao\DoAnWebNangCao\obj\Debug\DoAnWebNangCao.Migrations.UpdatePayment.resources
+C:\Users\ADMIN\Desktop\ASP\DoAnWebNangCao\DoAnWebNangCao\obj\Debug\DoAnWebNangCao.Migrations.addmigrationCreateTBThongKe.resources
+C:\Users\ADMIN\Desktop\ASP\DoAnWebNangCao\DoAnWebNangCao\bin\Dapper.dll
+C:\Users\ADMIN\Desktop\ASP\DoAnWebNangCao\DoAnWebNangCao\bin\Dapper.xml
+C:\Users\ADMIN\Desktop\ASP\DoAnWebNangCao\DoAnWebNangCao\obj\Debug\DoAnWebNangCao.Migrations.UpdateSubcrie.resources

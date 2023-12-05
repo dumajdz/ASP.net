@@ -8,25 +8,28 @@ using System.Web;
 namespace DoAnWebNangCao.Models.EF
 {
     [Table("tb_Order")]
-    public class Order:CommonAbstract
-    {       
-        public Order() { 
-            this.orderDetails = new HashSet<OrderDetail>();
+    public class Order : CommonAbstract
+    {
+        public Order()
+        {
+            this.OrderDetails = new HashSet<OrderDetail>();
         }
-
         [Key]
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Required]
         public string Code { get; set; }
-        [Required]
-        public string CostomerName { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Tên khách hàng không để trống")]
+        public string CustomerName { get; set; }
+        [Required(ErrorMessage = "Số điện thoại không để trống")]
         public string Phone { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Địa chỉ khổng để trống")]
         public string Address { get; set; }
-        public decimal TotalAmount  { get; set; }
+        public string Email { get; set; }
+        public decimal TotalAmount { get; set; }
         public int Quantity { get; set; }
-        public ICollection<OrderDetail> orderDetails { get; set; }
+        public int TypePayment { get; set; }
+        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }
+
 }

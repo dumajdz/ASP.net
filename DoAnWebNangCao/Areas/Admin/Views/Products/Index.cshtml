@@ -1,10 +1,11 @@
 ﻿@model PagedList.PagedList<DoAnWebNangCao.Models.EF.Product>
-@using PagedList.Mvc;
-@using PagedList;
+@using PagedList.Mvc
 @{
-    ViewBag.Title = "Danh sách sản phẩm ";
+    ViewBag.Title = "Danh sách sản phẩm";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
+
+
 
 @section naviheader{
     <!-- Left navbar links -->
@@ -90,29 +91,29 @@
                         foreach (var item in Model)
                         {
                             var strCheck = item.IsActive ? "<i class='fa fa-check text-success'></i>" : "<i class='fas fa-times text-danger'></i>";
-                            //var strCheckHome = item.IsHome ? "<i class='fa fa-check text-success'></i>" : "<i class='fas fa-times text-danger'></i>";
-                            //var strCheckSale = item.IsSale ? "<i class='fa fa-check text-success'></i>" : "<i class='fas fa-times text-danger'></i>";
-                            //var strImg = "";
-                            //var CheckImage = item.ProductImage.FirstOrDefault(x => x.IsDefault);
-                            //if (CheckImage != null)
-                            //{
-                            //    strImg = CheckImage.Image;
-                            //}
+                            var strCheckHome = item.IsHome ? "<i class='fa fa-check text-success'></i>" : "<i class='fas fa-times text-danger'></i>";
+                            var strCheckSale = item.IsSale ? "<i class='fa fa-check text-success'></i>" : "<i class='fas fa-times text-danger'></i>";
+                            var strImg = "";
+                            var CheckImage = item.ProductImage.FirstOrDefault(x => x.IsDefault);
+                            if (CheckImage != null)
+                            {
+                                strImg = CheckImage.Image;
+                            }
                             <tr id="trow_@item.Id">
                                 <td><input type="checkbox" class="cbkItem" value="@item.Id" /></td>
                                 <td>@i</td>
-                                @*<td><img class="imgproduct" data-id="@item.Id" src="@strImg" width="50" /></td>*@
+                                <td><img class="imgproduct" data-id="@item.Id" src="@strImg" width="50" /></td>
                                 <td>@item.Title</td>
                                 <td>@item.ProductCategory.Title</td>
                                 <td>@item.Quantity</td>
-                                @*<td>@DoAnWebNangCao.common.com.FormatNumber(item.Price, 0)</td>*@
+                                <td>@DoAnWebNangCao.Common.Common.FormatNumber(item.Price, 0)</td>
                                 <td>@item.CreatedDate.ToString("dd/MM/yyyy")</td>
-                                @*<td class="text-center">
-                                        <a href='#' data-id="@item.Id" class="btnHome">@Html.Raw(strCheckHome)</a>
-                                    </td>
-                                    <td class="text-center">
-                                        <a href='#' data-id="@item.Id" class="btnSale">@Html.Raw(strCheckSale)</a>
-                                    </td>*@
+                                <td class="text-center">
+                                    <a href='#' data-id="@item.Id" class="btnHome">@Html.Raw(strCheckHome)</a>
+                                </td>
+                                <td class="text-center">
+                                    <a href='#' data-id="@item.Id" class="btnSale">@Html.Raw(strCheckSale)</a>
+                                </td>
                                 <td class="text-center">
                                     <a href='#' data-id="@item.Id" class="btnActive">@Html.Raw(strCheck)</a>
                                 </td>
@@ -136,7 +137,7 @@
             <div class="row">
                 <div class="col-6"></div>
                 <div class="col-6" style="text-align:right;">
-                    @*@Html.PagedListPager(Model, page => Url.Action("Index", new { page })*@
+                    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
                 </div>
             </div>
 
@@ -311,4 +312,3 @@
         });
     </script>
 }
-

@@ -11,6 +11,7 @@ using System.Web.UI;
 
 namespace DoAnWebNangCao.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin,Employee")]
     public class NewsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
